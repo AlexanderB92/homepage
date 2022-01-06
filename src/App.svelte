@@ -23,7 +23,6 @@
 
 <main>
 	<h1>Hello, Alexander!</h1>
-
 	<FeedbackList feedback={feedbackData}/>
 </main>
 

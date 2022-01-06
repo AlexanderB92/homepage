@@ -1,62 +1,30 @@
 <script>
-	let firstName = 'Alexander';
-	let lastName = 'Brandstrup';
-	let showText = true;
+	import FeedbackList from "./components/FeedbackList.svelte";
 
-	let users = [
+	let feedbackData = [
 		{
 			id: 0,
-			name: "John"
+			rating: 5,
+			text: "Very happy"
 		},
 		{
 			id: 1,
-			name: "James"
+			rating: 4,
+			text: "Fairly happy"
 		},
 		{
 			id: 2,
-			name: "Bob"
+			rating: 2,
+			text: "Not happy"
 		}
 	]
-
-	function toggleText() {
-		showText = showText == false ? true : false;
-
-		users = [...users, {id: 3, name: "Jacob"}];
-	}
-
-	$: name = firstName + ' ' + lastName;
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	{#if showText}
-		<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-	{/if}
-	<button on:click={toggleText}>Toggle Text</button>
+	<h1>Hello Alexander!</h1>
 
-	{#each users as user (user.id)}
-		<h3>{user.id}: {user.name}</h3>
-	{/each}
+	<FeedbackList feedback={feedbackData}/>
 </main>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
 </style>

@@ -1,6 +1,7 @@
 <script>
 	import FeedbackList from "./components/FeedbackList.svelte";
 
+	//Test data
 	let feedbackData = [
 		{
 			id: 0,

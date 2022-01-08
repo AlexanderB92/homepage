@@ -3,7 +3,7 @@
 	import FeedbackList from './components/FeedbackList.svelte';
 	import FeedbackForm from './components/FeedbackForm.svelte';
 
-	var currentDateTime = new Date();
+	const currentDateTime = new Date();
 	const greeting = currentDateTime.getHours > 12 ? "morning" : "evening";
 		
 

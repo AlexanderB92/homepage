@@ -36,6 +36,8 @@
             }
 
             dispatch('feedback-added', newFeedback);
+
+            text = ''
         }
     }
 

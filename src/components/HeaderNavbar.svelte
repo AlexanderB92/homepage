@@ -25,7 +25,9 @@
 <style>
     .navbar-menu {
 	    position: sticky;
+        z-index: 1;
 	    top: 0;
+        background-color: #202023;
 		display: flex;
 		justify-content: center;
 	}

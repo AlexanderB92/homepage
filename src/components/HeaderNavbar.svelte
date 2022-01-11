@@ -14,6 +14,7 @@
 
 	<div class="navbar-button">Experience</div>
 	<div class="navbar-button">Current Work</div>
+    <div class="navbar-button">Drone Shots</div>
 	<div class="navbar-button"><img src="./assets/icon/GitHub-Mark-Light-32px.png" alt="x" class="source-logo"> Source</div>
 
     {#if mode === "dark"}

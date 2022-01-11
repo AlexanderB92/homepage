@@ -1,13 +1,10 @@
 <script>
-    const darkIcon = "./assets/icon/dark-mode-icon.svg"
-    const lightIcon = "./assets/icon/light-mode-icon.svg"
-
     let mode = "dark";
-    $: modeIcon = darkIcon;
 
     const toggleMode = (e) => {
         //Change to hide/show, not changed path
-        modeIcon = modeIcon === darkIcon ? lightIcon : darkIcon;
+        //modeIcon = modeIcon === darkIcon ? lightIcon : darkIcon;
+        mode = mode === "dark" ? "light" : "dark";
     }
 
 </script>
@@ -19,7 +16,12 @@
 	<div class="navbar-button">Current Work</div>
 	<div class="navbar-button"><img src="./assets/icon/GitHub-Mark-Light-32px.png" alt="x" class="source-logo"> Source</div>
 
-	<img src={modeIcon} alt="x" class="toggle-light-icon" id="toggle-mode" on:click={toggleMode}>
+    {#if mode === "dark"}
+        <img src="./assets/icon/dark-mode-icon.svg" alt="x" class="toggle-light-icon" id="toggle-mode" on:click={toggleMode}>
+    {:else}
+        <img src="./assets/icon/light-mode-icon.svg" alt="x" class="toggle-light-icon" id="toggle-mode" on:click={toggleMode}>
+    {/if}
+	
 </navbar>
 
 <style>

@@ -6,7 +6,7 @@
     $: modeIcon = darkIcon;
 
     const toggleMode = (e) => {
-        
+        //Change to hide/show, not changed path
         modeIcon = modeIcon === darkIcon ? lightIcon : darkIcon;
     }
 

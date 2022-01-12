@@ -11,9 +11,9 @@
 </script>
 
 <Card>
-    <div class="num-display">
+    <!-- <div class="num-display">
         {item.rating}
-    </div>
+    </div> -->
     <img src="./assets/icon/close-button.svg" on:click={() => handleDelete(item.id)} alt="X" class="close">
     <p class="text-display">
         {item.text}

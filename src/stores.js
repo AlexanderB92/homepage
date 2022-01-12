@@ -15,5 +15,25 @@ export const FeedbackStore = writable([
         id: 2,
         rating: 2,
         text: "Not happy"
+    },
+    {
+        id: 3,
+        rating: 2,
+        text: "Not happy"
+    },
+    {
+        id: 4,
+        rating: 2,
+        text: "Not happy"
+    },
+    {
+        id: 5,
+        rating: 10,
+        text: "Not happy"
+    },
+    {
+        id: 6,
+        rating: 2,
+        text: "Not happy"
     }
 ])

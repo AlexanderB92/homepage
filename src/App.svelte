@@ -12,11 +12,11 @@
 <HeaderNavbar />
 
 <main class="container">
-	<h1>Good {greeting}, Alexander!</h1>
+	<h1>Good {greeting}, fellow traveler!</h1>
 
-	<img src="./assets/images/author.jpg" alt="x" class="author-image" id="toggle-mode" on:click={toggleMode}>
+	<img src="./assets/images/author.jpg" alt="x" class="author-image" id="toggle-mode">
 
-	<FeedbackForm />
+	<!-- <FeedbackForm /> -->
 	<FeedbackList />
 	<FeedbackStats />
 </main>

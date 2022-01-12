@@ -13,6 +13,9 @@
 
 <main class="container">
 	<h1>Good {greeting}, Alexander!</h1>
+
+	<img src="./assets/images/author.jpg" alt="x" class="author-image" id="toggle-mode" on:click={toggleMode}>
+
 	<FeedbackForm />
 	<FeedbackList />
 	<FeedbackStats />
@@ -21,4 +24,12 @@
 <Footer/>
 
 <style>
+	.author-image {
+		height: 200px;
+		width: auto;
+		border-radius: 50%;
+		border: whitesmoke;
+		border-width: 2px;
+		border-style: solid;
+	}
 </style>

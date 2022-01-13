@@ -1,8 +1,10 @@
 <script>
-	import Footer from './components/Footer.svelte'
+	//Svelte Components
+	import Footer from './components/Footer.svelte';
 	import HeaderNavbar from './components/HeaderNavbar.svelte';
 	import FeedbackStats from './components/FeedbackStats.svelte';
 	import FeedbackList from './components/FeedbackList.svelte';
+	import AnimatedCanvas from './components/AnimatedCanvas.svelte';
 	import FeedbackForm from './components/FeedbackForm.svelte';
 
 	const currentDateTime = new Date();
@@ -14,14 +16,21 @@
 <main class="container">
 	<h1>Good {greeting}, fellow traveler!</h1>
 
-	<img src="./assets/images/author.jpg" alt="x" class="author-image" id="toggle-mode">
+	<AnimatedCanvas />
+
+	<img
+		src="./assets/images/author.jpg"
+		alt="x"
+		class="author-image"
+		id="toggle-mode"
+	/>
 
 	<!-- <FeedbackForm /> -->
 	<FeedbackList />
 	<FeedbackStats />
 </main>
 
-<Footer/>
+<Footer />
 
 <style>
 	.author-image {

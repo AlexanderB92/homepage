@@ -31,11 +31,14 @@
 
 <style>
 	.author-image {
+		display: flex;
+		justify-content:center;
 		height: 200px;
 		width: auto;
 		border-radius: 50%;
 		border: whitesmoke;
 		border-width: 2px;
 		border-style: solid;
+		margin: 20px;
 	}
 </style>

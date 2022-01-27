@@ -7,7 +7,7 @@
     let animatedScene;
     let scene, camera, renderer;
     let controls, pointlight;
-    let geometry, material, mesh;
+    let geometry, material, cube;
 
 
     onMount(() => { 
@@ -24,16 +24,16 @@
             10
         );
 
-        camera.position.z = 1;
+        camera.position.z = 10;
 
         //Scene
         scene = new THREE.Scene();
 
         //Object
-        geometry = new THREE.BoxGeometry(0.2, 0.2, 0.2);
+        geometry = new THREE.SphereGeometry(3, 50, 50, 0, Math.PI * 2, 0, Math.PI * 2);
         material = new THREE.MeshNormalMaterial();
-        mesh = new THREE.Mesh(geometry, material);
-        scene.add(mesh);
+        cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
 
         //Renderer and position
         renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, canvas: animatedScene });
@@ -51,8 +51,7 @@
     function animate(time) {
         controls.update();
         renderer.render(scene,camera);
-        //mesh.rotation.x = time / 4000;
-        mesh.rotation.y = time / 4000;
+        cube.rotation.y += 0.01;
         requestAnimationFrame(animate);
     };
 

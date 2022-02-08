@@ -7,7 +7,7 @@
         background-color: rgb(255, 167, 36);
         background-image: url("/assets/images/cardbackground.png");
         background-repeat: no-repeat;
-        background-size: auto;
+        background-size: cover;
         color: rgb(250, 250, 250);
         border-radius: 15px;
         padding: 40px 50px;

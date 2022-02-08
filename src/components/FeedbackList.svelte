@@ -28,6 +28,6 @@
     .card-grid {
         display: grid;
         grid-column-gap: 40px;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto;
     }
 </style>

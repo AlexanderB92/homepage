@@ -4,7 +4,7 @@
 
 <style>
     .card {
-        background-color: rgb(255, 167, 36);
+        background-color: rgb(0, 0, 0);
         background-image: url("/assets/images/cardbackground.png");
         background-repeat: no-repeat;
         background-size: cover;

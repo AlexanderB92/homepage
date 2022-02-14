@@ -5,16 +5,32 @@
 	import FeedbackList from './components/FeedbackList.svelte';
 	import AnimatedCanvas from './components/AnimatedCanvas.svelte';
 
+	import Router from 'svelte-spa-router'
+	import Home from './routes/Home.svelte';
+	import About from './routes/About.svelte';
+	import Test from './routes/Test.svelte';
+
 	const currentDateTime = new Date();
 	const greeting = currentDateTime.getHours > 12 ? "morning" : "evening";
+
+
+	const routes = {
+    // Exact path
+    '/': Home,
+    '/About': About,
+	'/Test': Test
+	}
+
+
 </script>
 
 <HeaderNavbar />
 
 <main class="container">
-	<h1>Good {greeting}, fellow traveler!</h1>
-
-	<AnimatedCanvas />
+	<!-- <h1>Good {greeting}, fellow traveler!</h1>
+ -->
+	<Router {routes}/>
+	<!-- <AnimatedCanvas />
 
 	<img
 		src="./assets/images/author.jpg"
@@ -22,9 +38,7 @@
 		class="author-image"
 		id="toggle-mode"
 	/>
-
-	<!-- <FeedbackForm /> -->
-	<FeedbackList />
+	<FeedbackList /> -->
 </main>
 
 <Footer />

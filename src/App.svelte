@@ -8,7 +8,6 @@
 	import Router from 'svelte-spa-router'
 	import Home from './routes/Home.svelte';
 	import About from './routes/About.svelte';
-	import Test from './routes/Test.svelte';
 
 	const currentDateTime = new Date();
 	const greeting = currentDateTime.getHours > 12 ? "morning" : "evening";
@@ -17,8 +16,7 @@
 	const routes = {
     // Exact path
     '/': Home,
-    '/About': About,
-	'/Test': Test
+    '/About': About
 	}
 
 

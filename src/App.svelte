@@ -25,10 +25,11 @@
 <HeaderNavbar />
 
 <main class="container">
-	<!-- <h1>Good {greeting}, fellow traveler!</h1>
- -->
+	<h1>Good {greeting}, fellow traveler!</h1>
+
 	<Router {routes}/>
-	<!-- <AnimatedCanvas />
+
+	<AnimatedCanvas />
 
 	<img
 		src="./assets/images/author.jpg"
@@ -36,7 +37,7 @@
 		class="author-image"
 		id="toggle-mode"
 	/>
-	<FeedbackList /> -->
+	<FeedbackList />
 </main>
 
 <Footer />

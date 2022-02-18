@@ -10,9 +10,9 @@
 </script>
 
 <navbar id="navbar" class="navbar-menu">
-	<div class="navbar-home"><img src="./assets/icon/favicon-32x32.png" alt="x" class="home-logo"> Alexander Brandstrup</div>
+	<a href="#/home"><div class="navbar-home"><img src="./assets/icon/favicon-32x32.png" alt="x" class="home-logo"> Alexander Brandstrup</div></a>
 
-	<div class="navbar-button">Experience</div>
+	<a href="#/about"><div class="navbar-button">Experience</div></a>
 	<div class="navbar-button">Current Work</div>
     <div class="navbar-button">Drone Shots</div>
 	<div class="navbar-button"><img src="./assets/icon/GitHub-Mark-Light-32px.png" alt="x" class="source-logo"> Source</div>

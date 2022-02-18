@@ -27,9 +27,9 @@
 <main class="container">
 	<h1>Good {greeting}, fellow traveler!</h1>
 
-	<Router {routes}/>
-
 	<AnimatedCanvas />
+
+	<Router {routes}/>
 
 	<img
 		src="./assets/images/author.jpg"

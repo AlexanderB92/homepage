@@ -4,21 +4,21 @@ export const FeedbackStore = writable([
     {
         id: 0,
         rating: 5,
-        text: "Very happy!!"
+        text: "Drone"
     },
     {
         id: 1,
         rating: 4,
-        text: "Fairly happy"
+        text: "Programming"
     },
     {
         id: 2,
         rating: 2,
-        text: "Not happy"
+        text: "Images"
     },
     {
         id: 3,
         rating: 2,
-        text: "Not happy"
+        text: "Placeholders"
     }
 ])

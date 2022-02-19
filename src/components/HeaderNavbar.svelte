@@ -13,9 +13,9 @@
 	<a href="#/home"><div class="navbar-home"><img src="./assets/icon/favicon-32x32.png" alt="x" class="home-logo"> Alexander Brandstrup</div></a>
 
 	<a href="#/about"><div class="navbar-button">Experience</div></a>
-	<div class="navbar-button">Current Work</div>
-    <div class="navbar-button">Drone Shots</div>
-	<div class="navbar-button"><img src="./assets/icon/GitHub-Mark-Light-32px.png" alt="x" class="source-logo"> Source</div>
+	<a href="#/currentwork"><div class="navbar-button">Current Work</div></a>
+    <a href="#/droneshots"><div class="navbar-button">Drone Shots</div></a>
+	<a href="#/source"><div class="navbar-button"><img src="./assets/icon/GitHub-Mark-Light-32px.png" alt="x" class="source-logo"> Source</div></a>
 
     {#if mode === "dark"}
         <img src="./assets/icon/dark-mode-icon.svg" alt="x" class="toggle-light-icon" id="toggle-mode" on:click={toggleMode}>

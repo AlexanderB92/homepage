@@ -1,25 +1,45 @@
 <script>
 	//Svelte Components
-	import Footer from './components/Footer.svelte';
-	import HeaderNavbar from './components/HeaderNavbar.svelte';
-	import FeedbackList from './components/FeedbackList.svelte';
-	import AnimatedCanvas from './components/AnimatedCanvas.svelte';
+	import { onMount } from "svelte";
+	import Footer from "./components/Footer.svelte";
+	import HeaderNavbar from "./components/HeaderNavbar.svelte";
+	import FeedbackList from "./components/FeedbackList.svelte";
+	import AnimatedCanvas from "./components/AnimatedCanvas.svelte";
 
-	import Router from 'svelte-spa-router'
-	import Home from './routes/Home.svelte';
-	import About from './routes/About.svelte';
+	//Routing
+	import Router from "svelte-spa-router";
+	import Home from "./routes/Home.svelte";
+	import About from "./routes/About.svelte";
 
+	//Misc
 	const currentDateTime = new Date();
 	const greeting = currentDateTime.getHours > 12 ? "morning" : "evening";
 
-
+	//Routing
 	const routes = {
-    // Exact path
-    '/': Home,
-    '/About': About
-	}
+		// Exact path
+		"/": Home,
+		"/About": About,
+	};
 
+	//Processing
+	import P5Sketch from "./components/P5Sketch.svelte";
 
+	let sketch = function (p5) {
+		let randX = 0;
+		let randY = 0;
+
+		p5.setup = () => {
+			p5.createCanvas(720, 400);
+		};
+
+		p5.draw = () => {
+			p5.background(64);
+			p5.ellipse(randX, randY, 20, 20);
+			randX = randX+1;
+			randY = randY+1;
+		};
+	};
 </script>
 
 <HeaderNavbar />
@@ -29,7 +49,7 @@
 
 	<AnimatedCanvas />
 
-	<Router {routes}/>
+	<Router {routes} />
 
 	<img
 		src="./assets/images/author.jpg"
@@ -38,14 +58,14 @@
 		id="toggle-mode"
 	/>
 	<FeedbackList />
+	<P5Sketch {sketch} />
 </main>
-
 <Footer />
 
 <style>
 	.author-image {
 		display: flex;
-		justify-content:center;
+		justify-content: center;
 		height: 200px;
 		width: auto;
 		border-radius: 50%;

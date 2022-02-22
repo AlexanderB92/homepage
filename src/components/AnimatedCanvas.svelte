@@ -30,8 +30,8 @@
         scene = new THREE.Scene();
 
         //Object
-        geometry = new THREE.SphereGeometry(3, 50, 50, 0, Math.PI * 2, 0, Math.PI * 2);
-        material = new THREE.MeshNormalMaterial();
+        geometry = new THREE.SphereGeometry(5, 50, 50, 0, Math.PI * 2, 0, Math.PI * 2);
+        material = new THREE.MeshDistanceMaterial();
         cube = new THREE.Mesh(geometry, material);
         scene.add(cube);
 
@@ -51,7 +51,7 @@
     function animate(time) {
         controls.update();
         renderer.render(scene,camera);
-        cube.rotation.y += 0.01;
+        cube.rotation.y += 0.001;
         requestAnimationFrame(animate);
     };
 

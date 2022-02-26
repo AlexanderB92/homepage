@@ -35,7 +35,7 @@
 
 		p5.draw = () => {
 			p5.background(64);
-			p5.ellipse(randX, randY, 20, 20);
+			p5.ellipse(randX, randY, 30, 30);
 			randX = randX+1;
 			randY = randY+1;
 		};

@@ -26,11 +26,12 @@
 	import P5Sketch from "./components/P5Sketch.svelte";
 
 	let sketch = function (p5) {
+		let canvas;
 		let randX = 0;
 		let randY = 0;
 
 		p5.setup = () => {
-			p5.createCanvas(720, 400);
+			canvas = p5.createCanvas(720, 400);
 		};
 
 		p5.draw = () => {
@@ -38,6 +39,13 @@
 			p5.ellipse(randX, randY, 30, 30);
 			randX = randX+1;
 			randY = randY+1;
+
+			if(randX == canvas.width) {
+				randX = 0;
+			}
+			if(randY == canvas.height) {
+				randY = 0;
+			}
 		};
 	};
 </script>

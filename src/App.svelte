@@ -13,7 +13,7 @@
 
 	//Misc
 	const currentDateTime = new Date();
-	const greeting = currentDateTime.getHours > 12 ? "morning" : "evening";
+	const greeting = currentDateTime.getHours > 12 ? "morning" : "afternoon";
 
 	//Routing
 	const routes = {

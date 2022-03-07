@@ -53,7 +53,7 @@
 <HeaderNavbar />
 
 <main class="container">
-	<h1>Good {greeting}, fellow traveler!</h1>
+	<h1>Good {greeting}, visitor!</h1>
 
 	<AnimatedCanvas />
 

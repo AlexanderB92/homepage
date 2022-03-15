@@ -51,7 +51,7 @@
 </script>
 
 <HeaderNavbar />
-
+<P5Sketch {sketch} />
 <main class="container">
 	<h1>Good {greeting}, visitor!</h1>
 
@@ -66,7 +66,7 @@
 		id="toggle-mode"
 	/>
 	<FeedbackList />
-	<P5Sketch {sketch} />
+	
 </main>
 <Footer />
 

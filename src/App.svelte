@@ -5,6 +5,7 @@
 	import HeaderNavbar from "./components/HeaderNavbar.svelte";
 	import FeedbackList from "./components/FeedbackList.svelte";
 	import AnimatedCanvas from "./components/AnimatedCanvas.svelte";
+	import {sketch} from "./components/BallAnimation.svelte"
 
 	//Routing
 	import Router from "svelte-spa-router";
@@ -13,7 +14,10 @@
 
 	//Misc
 	const currentDateTime = new Date();
-	const greeting = currentDateTime.getHours > 12 ? "morning" : "afternoon";
+	const greeting = currentDateTime.getHours > 12 ? "morning" : "afternoon"; //Crude - ignore
+
+	//Processing
+	import P5Sketch from "./components/P5Sketch.svelte";
 
 	//Routing
 	const routes = {
@@ -22,40 +26,19 @@
 		"/About": About,
 	};
 
-	//Processing
-	import P5Sketch from "./components/P5Sketch.svelte";
 
-	let sketch = function (p5) {
-		let canvas;
-		let randX = 0;
-		let randY = 0;
-
-		p5.setup = () => {
-			canvas = p5.createCanvas(720, 400);
-		};
-
-		p5.draw = () => {
-			p5.background(64);
-			p5.ellipse(randX, randY, 30, 30);
-			randX = randX+1;
-			randY = randY+1;
-
-			if(randX == canvas.width) {
-				randX = 0;
-			}
-			if(randY == canvas.height) {
-				randY = 0;
-			}
-		};
-	};
 </script>
+
+<div class="AnimatedCanvas">
+	<slot></slot>
+</div>
 
 <HeaderNavbar />
 <P5Sketch {sketch} />
 <main class="container">
 	<h1>Good {greeting}, visitor!</h1>
 
-	<AnimatedCanvas />
+	<!-- <AnimatedCanvas /> -->
 
 	<Router {routes} />
 

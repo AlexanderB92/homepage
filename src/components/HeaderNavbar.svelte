@@ -12,9 +12,9 @@
 <navbar id="navbar" class="navbar-menu">
 	<a href="#/home"><div class="navbar-home"><img src="./assets/icon/favicon-32x32.png" alt="x" class="home-logo"> Alexander Brandstrup</div></a>
 
-	<a href="#/about"><div class="navbar-button">Experience</div></a>
+	<a href="#/experience"><div class="navbar-button">Experience</div></a>
 	<a href="#/currentwork"><div class="navbar-button">Current Work</div></a>
-    <a href="#/droneshots"><div class="navbar-button">Drone Shots</div></a>
+    <a href="#/recreation"><div class="navbar-button">Drone Shots</div></a>
 	<a href="#/source"><div class="navbar-button"><img src="./assets/icon/GitHub-Mark-Light-32px.png" alt="x" class="source-logo"> Source</div></a>
 
     {#if mode === "dark"}

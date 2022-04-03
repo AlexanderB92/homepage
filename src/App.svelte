@@ -10,7 +10,9 @@
 	//Routing
 	import Router from "svelte-spa-router";
 	import Home from "./routes/Home.svelte";
-	import About from "./routes/About.svelte";
+	import Experience from "./routes/Experience.svelte";
+	import CurrentWork from "./routes/CurrentWork.svelte";
+	import Recreation from "./routes/Recreation.svelte";
 
 	//Misc
 	const currentDateTime = new Date();
@@ -23,7 +25,9 @@
 	const routes = {
 		// Exact path
 		"/": Home,
-		"/About": About,
+		"/Experience": Experience,
+		"/CurrentWork": CurrentWork,
+		"/Recreation": Recreation
 	};
 
 

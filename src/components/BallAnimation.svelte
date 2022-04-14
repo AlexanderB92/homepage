@@ -1,6 +1,5 @@
 <script context="module">
-export const sketch = function (p5) {
-    let canvas;
+export const sketch = function (p5, canvas) {
     let randX = 0;
     let randY = 0;
 

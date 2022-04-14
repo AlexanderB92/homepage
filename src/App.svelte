@@ -30,13 +30,10 @@
 </script>
 <HeaderNavbar />
 
-<div id="processing-container">
-	<P5Sketch {sketch} />
-</div>
 <main class="container">
 	<div class="greeting-flag">
 		<div>
-			<h1 style="display:flex; justify-content:left;">Hello There!</h1>
+			<h1>Hello There!</h1>
 			This is my homepage!
 		</div>
 		<img
@@ -46,14 +43,12 @@
 			id="toggle-mode"
 		/>
 	</div>
-	<!-- <AnimatedCanvas /> -->
-	<Router {routes} />
-	<FeedbackList />
 	
 </main>
 <Footer />
 
 <style>
+
 	.author-image {
 		display: flex;
 		justify-content: right;
@@ -69,6 +64,6 @@
 	.greeting-flag {
   		display: flex;
   		align-items: center;
-		justify-content: space-between;
+		justify-content: space-evenly;
 	}
 </style>

@@ -65,5 +65,5 @@
 </script>
 
 <div id="three-container">
-<canvas style="position: relative;" bind:this={animatedScene}></canvas>
+    <canvas style="position: relative;" bind:this={animatedScene}></canvas>
 </div>

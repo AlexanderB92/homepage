@@ -31,7 +31,7 @@
 
         //Object
         geometry = new THREE.SphereGeometry(5, 50, 50, 0, Math.PI * 2, 0, Math.PI * 2);
-        material = new THREE.MeshDistanceMaterial();
+        material = new THREE.ShaderMaterial();
         cube = new THREE.Mesh(geometry, material);
         scene.add(cube);
 
@@ -64,4 +64,6 @@
     } */
 </script>
 
-<canvas bind:this={animatedScene}></canvas>
+<div id="three-container">
+<canvas style="position: relative;" bind:this={animatedScene}></canvas>
+</div>

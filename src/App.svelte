@@ -14,10 +14,6 @@
 	import CurrentWork from "./routes/CurrentWork.svelte";
 	import Recreation from "./routes/Recreation.svelte";
 
-	//Misc
-	const currentDateTime = new Date();
-	const greeting = currentDateTime.getHours > 12 ? "morning" : "afternoon"; //Crude - ignore
-
 	//Processing
 	import P5Sketch from "./components/P5Sketch.svelte";
 
@@ -32,26 +28,26 @@
 
 
 </script>
-
-<div class="AnimatedCanvas">
-	<slot></slot>
-</div>
-
 <HeaderNavbar />
-<P5Sketch {sketch} />
+
+<div id="processing-container">
+	<P5Sketch {sketch} />
+</div>
 <main class="container">
-	<h1>Good {greeting}, visitor!</h1>
-
+	<div class="greeting-flag">
+		<div>
+			<h1 style="display:flex; justify-content:left;">Hello There!</h1>
+			This is my homepage!
+		</div>
+		<img
+			src="./assets/images/author.jpg"
+			alt="x"
+			class="author-image"
+			id="toggle-mode"
+		/>
+	</div>
 	<!-- <AnimatedCanvas /> -->
-
 	<Router {routes} />
-
-	<img
-		src="./assets/images/author.jpg"
-		alt="x"
-		class="author-image"
-		id="toggle-mode"
-	/>
 	<FeedbackList />
 	
 </main>
@@ -60,7 +56,7 @@
 <style>
 	.author-image {
 		display: flex;
-		justify-content: center;
+		justify-content: right;
 		height: 200px;
 		width: auto;
 		border-radius: 50%;
@@ -68,5 +64,11 @@
 		border-width: 2px;
 		border-style: solid;
 		margin: 20px;
+	}
+
+	.greeting-flag {
+  		display: flex;
+  		align-items: center;
+		justify-content: space-between;
 	}
 </style>
